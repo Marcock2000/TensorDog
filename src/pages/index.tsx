@@ -46,15 +46,15 @@ const Home: NextPage = () => {
       </Head>
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
-          <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-            <span className="text-[hsl(280,100%,70%)]">TensorDog</span> 
+          <h1 className="text-5xl font-extrabold font-mono tracking-tight text-white sm:text-[5rem]">
+            <span className="text-[hsl(280,100%,70%)] font-mono">TensorDog</span> 
           </h1>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
             <div
               className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
             >
-              <h3 className="text-2xl font-bold justify-center items-center text-center">What is this?</h3>
-              <div className="text-lg text-justify p-2">
+              <h3 className="text-2xl font-bold justify-center items-center font-mono text-center">What is this?</h3>
+              <div className="text-md text-justify font-mono p-2">
               When the stakes are this high, you should never trust your fallible human eyes. 
               Instead, use TensorDog, the revolutionary TensorFlow-powered app that is only fallible sometimes.
                Never again will you be plagued by the age-old question of whether a picture contains a hotdog or not. 
@@ -63,7 +63,7 @@ const Home: NextPage = () => {
             <div
               className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
             >
-              <h3 className="text-2xl font-bold text-center">TensorDog    </h3>
+              <h3 className="text-2xl font-bold font-mono text-center">TensorDog    </h3>
           <div className="flex flex-col items-center mt-8">
             <label
               htmlFor="image-upload"
