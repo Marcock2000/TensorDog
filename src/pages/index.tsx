@@ -1,4 +1,4 @@
-import { type NextPage } from "next";
+import { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -34,7 +34,6 @@ const Home: NextPage = () => {
       setIsLoading(false); // stop loading animation
     }
   };
-
   return (
     <>
       <Head>
