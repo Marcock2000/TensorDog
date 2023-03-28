@@ -22,7 +22,7 @@ const Home: NextPage = () => {
       formData.append("image", image);
 
       const response = await fetch(
-        "http://marcovrc2000.pythonanywhere.com/process_image",
+        "https://marcovrc2000.pythonanywhere.com/process_image",
         {
           method: "POST",
           body: formData,
