@@ -1,9 +1,14 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Home: NextPage = () => {
+  interface ResponseData {
+    message: string;
+    result: boolean;
+  };
+  
   const [image, setImage] = useState<File | null>(null);
   const [isHotDog, setIsHotDog] = useState<boolean | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -29,11 +34,15 @@ const Home: NextPage = () => {
         }
       );
 
-      const data = await response.json();
-      if (!response.ok) {
-        alert(data.message || "Something went wrong!");
+      try {
+        const data: ResponseData = await response.json();
+        if (!response.ok) {
+          throw new Error(data.message || "Something went wrong!");
+        }
+        setIsHotDog(data.result);
+      } catch (error) {
+        alert(error);
       }
-      setIsHotDog(data.result);
       setIsLoading(false); // stop loading animation
     }
   };
