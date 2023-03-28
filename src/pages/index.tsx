@@ -1,7 +1,7 @@
-import type{ NextPage } from "next";
+import { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
-import {  motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Home: NextPage = () => {
   const [image, setImage] = useState<File | null>(null);
