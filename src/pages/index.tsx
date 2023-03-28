@@ -30,6 +30,9 @@ const Home: NextPage = () => {
       );
 
       const data = await response.json();
+      if (!response.ok) {
+        alert(data.message || "Something went wrong!");
+      }
       setIsHotDog(data.result);
       setIsLoading(false); // stop loading animation
     }
